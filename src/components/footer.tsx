@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Logo from "./Logo"; // Se till att din Logo-komponent är importerad
 
@@ -16,7 +15,6 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Vänster kolumn: Länkar */}
           <div className="flex flex-col items-center md:items-start">
-            
             <ul className="space-y-2 text-center md:text-left">
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -33,7 +31,9 @@ const Footer: React.FC = () => {
 
           {/* Mitten kolumn: Adress och telefon */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-lg font-semibold text-primery mb-4">Information</h3>
+            <h3 className="text-lg font-semibold text-primery mb-4">
+              Information
+            </h3>
             <p className="text-muted-foreground mb-2">
               <strong>Postadress:</strong> Folkungagatan 35 E, 595 32 MJÖLBY
             </p>
@@ -60,10 +60,19 @@ const Footer: React.FC = () => {
         {/* Nedre sektion: Copyright och designinfo */}
         <div className="text-center text-sm text-muted-foreground border-t border-border pt-8 mt-8">
           <p className="mb-2">
-            &copy; {new Date().getFullYear()} Skeninge VVS AB. Alla rättigheter reserverade.
+            &copy; {new Date().getFullYear()} Skeninge VVS AB. Alla rättigheter
+            reserverade.
           </p>
           <p>
-            Kod & Design By Josefine Eriksson
+            {" "}
+            <a
+              href="https://www.kodochdesign.se"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kod & Design
+            </a>{" "}
+            av Josefine Eriksson
           </p>
         </div>
       </div>
