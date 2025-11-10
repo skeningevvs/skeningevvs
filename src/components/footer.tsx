@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               <strong>Besöksadress:</strong> Fabriksgatan 6, 596 33 Skänninge
             </p>
             <p className="text-muted-foreground mb-2">
-              <strong>E-post:</strong> skeningevvsab@msn.se
+              <strong>E-post:</strong> skeningevvsab@msn.com
             </p>
             <p className="text-muted-foreground mb-2">
               <strong>Bosse Engelke:</strong> 0708-417290

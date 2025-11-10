@@ -50,26 +50,26 @@ const Contact: React.FC = () => (
       name="Kristian Engelke"
       title="VVS-montör"
       phone="0735-358075"
-      mail="skeningevvsab@msn.se"
+      mail="skeningevvsab@msn.com"
     />
     <PersonCard
       img="/images/bosse.png"
       name="Bosse Engelke"
       title="Ägare/VVS-montör"
       phone="0708-417290"
-      mail="skeningevvsab@msn.se"
+      mail="skeningevvsab@msn.com"
     />
     <PersonCard
       img="/images/nina.png"
       name="Nina Engelke"
       title="Ägare/Administratör"
-      mail="skeningevvsab@msn.se"
+      mail="skeningevvsab@msn.com"
     />
     <PersonCard
       img="/images/tyson.png"
       name="Tyson"
       title="VVS-Vovve/Säkerhetsansvarig"
-      mail="skeningevvsab@msn.se"
+      mail="skeningevvsab@msn.com"
     />
 
     {/* Google map */}
