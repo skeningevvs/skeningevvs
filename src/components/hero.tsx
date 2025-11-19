@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
         </Button>
         <div className="flex justify-center mt-8">
           <Image
-            src="/images/skeningebuss2.png"
+            src="/images/skeninge-vvs-jul.png"
             alt="Skeninge VVS Rörbuss"
             width={1200}
             height={800}
