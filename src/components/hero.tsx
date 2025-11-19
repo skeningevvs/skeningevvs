@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
       <div className="hidden md:flex h-screen justify-center items-center bg-opacity-100">
   <div className="relative h-full w-full">
     <Image
-      src="/images/skeningebuss2.png"
+      src="/images/skeninge-vvs-jul.png"
       alt="Skeninge VVS Rörbuss"
       fill
       className="h-full object-contain w-full"
