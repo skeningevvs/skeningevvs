@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
         </Button>
         <div className="flex justify-center mt-8">
           <Image
-            src="/images/skeninge-vvs-jul.png"
+            src="/images/skeningebuss2.png"
             alt="Skeninge VVS Rörbuss"
             width={1200}
             height={800}
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
       <div className="hidden md:flex h-screen justify-center items-center bg-opacity-100">
   <div className="relative h-full w-full">
     <Image
-      src="/images/skeninge-vvs-jul.png"
+      src="/images/skeningebuss2.png"
       alt="Skeninge VVS Rörbuss"
       fill
       className="h-full object-contain w-full"

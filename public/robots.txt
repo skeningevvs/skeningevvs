@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://skeningevvs.se/sitemap.xml
+Sitemap: https://skeningevvs.se/sitemap.xml, https://www.skeningevvs.se/sitemap.xml
