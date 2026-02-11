@@ -41,6 +41,7 @@ import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import About from "../components/about";
 import Services from "../components/services";
+import TrustmaryWidget from "@/components/trustmary";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 
@@ -74,6 +75,7 @@ export default function Page() {
         <Hero />
         <About />
         <Services />
+        <TrustmaryWidget />
         <Contact />
         <Footer />
       </main>

@@ -24,9 +24,6 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
     ? (resolvedTheme === "dark" ? "/images/skeningevvs-vit.png" : "/images/skeningevvs.png")
     : "/images/skeningevvs.png"; // Standardbild för SSR
 
-  // Använd resolvedTheme för att bestämma det faktiska temat
-  const isDarkMode = resolvedTheme === "dark";
-
   return (
     <Image
       // src={isDarkMode ? "/images/skeningevvs-vit.png" : "/images/skeningevvs.png"} // Gammal rad
