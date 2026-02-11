@@ -37,15 +37,15 @@ export default function TrustmaryWidget() {
       </div>
 
       <div className="flex justify-center">
-       <Button asChild>
+       <Button asChild className="text-xl font-bold px-2 py-2 h-auto">
           <a
             href="https://www.google.com/search?sa=X&sca_esv=8ed7b9c9fed93e72&sxsrf=ANbL-n6PfwE85w1HXk0SQOFdtdEfW0ENuA:1770806998886&q=Skeninge+VVS+AB+Recensioner&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDY0NjY3MzYxMTcxtTQ1MTQ3NtzAyPiKUTo4OzUvMy89VSEsLFjB0UkhKDU5Na84Mz8vtWgRKz5ZAPQsD1tXAAAA&rldimm=13133763447459541731&tbm=lcl&hl=sv-SE&ved=2ahUKEwiKr4mRotGSAxXYHRAIHUxzIpMQ9fQKegQITBAG&biw=2560&bih=1271&dpr=1#lkt=LocalPoiReviews"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center font-bold bg-red-800 hover:scale-105 hover:bg-red-900 transition-transform duration-200 px-6 py-3 rounded text-white"
+            className="inline-flex items-center bg-red-800 hover:scale-105 hover:bg-red-900 transition-transform duration-200"
           >
             Lämna en recension!
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ml-2 h-6 w-6" />
           </a>
         </Button>
       </div>
