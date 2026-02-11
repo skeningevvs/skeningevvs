@@ -39,7 +39,7 @@ export default function TrustmaryWidget() {
       <div className="flex justify-center">
        <Button asChild className="text-xl font-bold px-2 py-2 h-auto">
           <a
-            href="https://www.google.com/search?sa=X&sca_esv=8ed7b9c9fed93e72&sxsrf=ANbL-n6PfwE85w1HXk0SQOFdtdEfW0ENuA:1770806998886&q=Skeninge+VVS+AB+Recensioner&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDY0NjY3MzYxMTcxtTQ1MTQ3NtzAyPiKUTo4OzUvMy89VSEsLFjB0UkhKDU5Na84Mz8vtWgRKz5ZAPQsD1tXAAAA&rldimm=13133763447459541731&tbm=lcl&hl=sv-SE&ved=2ahUKEwiKr4mRotGSAxXYHRAIHUxzIpMQ9fQKegQITBAG&biw=2560&bih=1271&dpr=1#lkt=LocalPoiReviews"
+            href="https://www.google.com/search?q=Skeninge+VVS+AB+Recensioner&ludocid=13133763447459541731&client=ms-android-motorola-rvo3&cs=1&hs=0JfU&hl=sv&sa=X&ved=0CCIQ9fQKKABqFwoTCKi38IW40ZIDFQAAAAAdAAAAABAF&biw=411&bih=770&dpr=1.75#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-sky-800 hover:scale-105 hover:bg-sky-900 transition-transform duration-200"
