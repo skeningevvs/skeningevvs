@@ -34,8 +34,7 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="mt-5 text-base text-slate-300 font-medium leading-relaxed">
-              Små i storlek – stora på service. Vi löser allt från akuta läckor
-              till kompletta badrumsrenoveringar.
+              Små i storlek – stora på service. VVS-tjänster för både privatpersoner och företag.
             </p>
 
             <div className="mt-7 flex flex-col gap-3">
