@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <section className="dark relative w-full overflow-hidden bg-slate-950 text-white">
       {/* DESKTOP: bakgrundsbild */}
-      <div className="absolute inset-0 z-0 hidden md:block">
+      <div className="absolute bg-center inset-0 z-0 hidden md:block">
         <Image
           src="/images/skeninge-vvs-i-skänninge-mjölby-vadstena.png"
           alt="Skeninge VVS"
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* DESKTOP INNEHÅLL */}
+    
       <div className="hidden md:block">
         <div className="container relative z-10 mx-auto px-4 py-20 md:py-32">
           <div className="max-w-3xl">
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              {/* RÖD KNAPP */}
+            
               <Button
                 asChild
                 size="lg"
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
                 </Link>
               </Button>
 
-              {/* BLÅ KNAPP */}
+
               <Button
                 asChild
                 size="lg"
