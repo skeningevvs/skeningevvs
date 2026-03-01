@@ -1,6 +1,6 @@
-# Skeninge VVS AB — Personlig hemsida
+# Skeninge VVS AB — personlig företags hemsida
 
-En modern, responsiv webbplats byggd med Next.js 13 (App Router), TypeScript och Tailwind CSS för Skeninge VVS AB.
+En modern, responsiv webbplats byggd med Next.js 16 (App Router), TypeScript och Tailwind CSS för Skeninge VVS AB.
 
 ## Snabbstart
 1. Klona repo och installera beroenden:
