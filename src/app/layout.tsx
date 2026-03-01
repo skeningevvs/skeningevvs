@@ -11,6 +11,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://skeningevvsab.pages.dev"),
   title:
     "Skeninge VVS AB - Rörmokare, Badrumsrenovering & Värmesystem i Skänninge, Mjölby & Östergötland",
   description:
