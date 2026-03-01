@@ -41,8 +41,8 @@ const About: React.FC = () => (
         alt="Teamet från Skeninge VVS"
         width={600}
         height={400}
-        className="rounded-2xl shadow-xl shadow-black/10 dark:shadow-black/40
-                   ring-1 ring-border/60
+        className="rounded-2xl 
+                   ring-1  border-0
                    transition-transform duration-300 hover:scale-[1.02]"
       />
     </div>
