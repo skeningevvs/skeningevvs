@@ -10,9 +10,18 @@ const PersonCard: React.FC<{
   phone?: string;
   mail?: string;
 }> = ({ img, name, title, phone, mail }) => (
-  <Card className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-2xl border border-border dark:border-gray-800 shadow-md p-4 flex flex-col items-center text-center hover:scale-105 transition-transform duration-200">
+  <Card
+    className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-3xl
+               border border-border/60 bg-card/60 backdrop-blur
+               shadow-lg shadow-black/5 dark:shadow-black/30
+               p-5 flex flex-col items-center text-center
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/40"
+  >
     <Image
-      className="w-20 h-20 rounded-full object-cover mb-3 border-2 border-border"
+      className="w-20 h-20 rounded-full object-cover mb-3
+                 ring-2 ring-primary/30 border border-border/60
+                 transition-transform duration-300 hover:scale-105"
       src={img}
       alt={name}
       width={80}
@@ -25,7 +34,10 @@ const PersonCard: React.FC<{
       {phone && (
         <div className="flex items-center justify-center gap-2 text-sm">
           <Phone className="h-4 w-4 text-muted-foreground" />
-          <a href={`tel:${phone}`} className="text-primary hover:underline">
+          <a
+            href={`tel:${phone}`}
+            className="rounded-md px-2 py-1 text-primary transition-colors hover:bg-primary/10"
+          >
             {phone}
           </a>
         </div>
@@ -34,7 +46,10 @@ const PersonCard: React.FC<{
       {mail && (
         <div className="flex items-center justify-center gap-2 text-sm">
           <Mail className="h-4 w-4 text-muted-foreground" />
-          <a href={`mailto:${mail}`} className="text-primary hover:underline">
+          <a
+            href={`mailto:${mail}`}
+            className="rounded-md px-2 py-1 text-primary transition-colors hover:bg-primary/10"
+          >
             {mail}
           </a>
         </div>
@@ -44,7 +59,7 @@ const PersonCard: React.FC<{
 );
 
 const Contact: React.FC = () => (
-  <section id="contact" className="flex flex-wrap  justify-center gap-6 p-6">
+  <section id="contact" className="flex flex-wrap justify-center gap-6 p-6">
     <PersonCard
       img="/images/kristian.png"
       name="Kristian Engelke"
@@ -73,7 +88,7 @@ const Contact: React.FC = () => (
     />
 
     {/* Google map */}
-    <div className="w-full mt-6 rounded-2xl overflow-hidden shadow-md">
+    <div className="w-full mt-8 rounded-3xl overflow-hidden border border-border/60 shadow-lg shadow-black/5 dark:shadow-black/30">
       <div className="w-full h-96">
         <iframe
           className="w-full h-full"

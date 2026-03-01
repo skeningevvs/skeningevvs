@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-background/95 sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4">
         {/* Vänster sida: Logo */}
         <div className="flex items-center space-x-4">
@@ -45,7 +45,9 @@ const Navbar: React.FC = () => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sky-600 text-lg text-semibold hover:text-red-700"
+                  className="relative text-sm font-semibold text-foreground/80 transition-colors hover:text-foreground
+                             after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:rounded-full
+                             after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {link.label}
                 </Link>
@@ -86,13 +88,14 @@ const Navbar: React.FC = () => {
                 <div className="flex justify-end items-center mb-4">
                   {/* Temaknappen här endast för att visa att den inte ska vara där längre */}
                 </div>
-                <ul className=" space-y-4">
+                <ul className="space-y-4">
                   {navLinks.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className="p-4 text-sky-700 text-lg transition-colors hover:text-primary"
+                        className="group flex items-center justify-between rounded-xl border border-border/60 bg-card/50 px-4 py-3 text-foreground/90
+                                   transition-all duration-200 hover:-translate-y-0.5 hover:border-border hover:bg-card hover:shadow-md"
                       >
                         {link.label}
                       </Link>

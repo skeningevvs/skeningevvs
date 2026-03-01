@@ -4,10 +4,19 @@ import Image from "next/image";
 const About: React.FC = () => (
   <section
     id="omoss"
-    className="flex flex-col md:flex-row items-center justify-between p-8 rounded-2xl max-w-6xl mx-auto my-10 bg-card shadow-md border border-border m-4"
+    className="relative flex flex-col md:flex-row items-center justify-between
+               p-8 md:p-10 rounded-3xl max-w-6xl mx-auto my-10
+               bg-card/70 backdrop-blur border border-border/60
+               shadow-lg shadow-black/5 dark:shadow-black/30
+               m-4 overflow-hidden"
   >
-    <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 text-left">
-      <h2 className="text-2xl font-bold text-sky-700 mb-4">Om oss</h2>
+    <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+    <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-secondary/15 blur-3xl" />
+
+    <div className="w-full md:w-1/2 md:pr-10 mb-8 md:mb-0 text-left relative">
+      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 tracking-tight">
+        Om oss
+      </h2>
       <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
         Skeninge VVS AB är ett VVS-företag som grundades 1986 i Skänninge. Vi
         erbjuder pålitliga tjänster inom värme, ventelation och sanitet för både
@@ -26,14 +35,15 @@ const About: React.FC = () => (
       </p>
     </div>
 
-    <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+    <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0 relative">
       <Image
         src="/images/kristiantysonbosse.png"
         alt="Teamet från Skeninge VVS"
         width={600}
         height={400}
-        className="rounded-lg shadow-lg"
-       
+        className="rounded-2xl shadow-xl shadow-black/10 dark:shadow-black/40
+                   ring-1 ring-border/60
+                   transition-transform duration-300 hover:scale-[1.02]"
       />
     </div>
   </section>

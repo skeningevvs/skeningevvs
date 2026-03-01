@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-background text-foreground py-12 border-t border-border">
+    <footer className="bg-background/60 backdrop-blur text-foreground py-12 border-t border-border/60">
       <div className="container mx-auto px-4">
         {/* Övre sektion med logotyp, adress och länkar */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sky-600 hover:text-primary transition-colors font-semibold"
+                    className="text-foreground/70 hover:text-primary transition-colors font-semibold"
                   >
                     {link.label}
                   </Link>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
 
           {/* Mitten kolumn: Adress och telefon */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-lg font-semibold text-primery mb-4">
+            <h3 className="text-lg font-semibold text-foreground mb-4">
               Information
             </h3>
             <p className="text-muted-foreground mb-2">
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Nedre sektion: Copyright och designinfo */}
-        <div className="text-center text-sm text-muted-foreground border-t border-border pt-8 mt-8">
+        <div className="text-center text-sm text-muted-foreground border-t border-border/60 pt-8 mt-8">
           <p className="mb-2">
             &copy; {new Date().getFullYear()} Skeninge VVS AB. Alla rättigheter
             reserverade.
@@ -69,6 +69,7 @@ const Footer: React.FC = () => {
               href="https://www.kodochdesign.se"
               target="_blank"
               rel="noopener noreferrer"
+              className="font-semibold text-foreground/70 hover:text-primary transition-colors"
             >
               Kod & Design
             </a>{" "}

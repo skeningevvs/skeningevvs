@@ -67,7 +67,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="bg-gray-100 dark:bg-gray-900">
+      <main className="bg-background text-foreground">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -82,6 +82,3 @@ export default function Page() {
     </>
   );
 }
-
-
-
