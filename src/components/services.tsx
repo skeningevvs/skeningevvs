@@ -62,9 +62,9 @@ const services: ServiceItem[] = [
 const ServiceCard: React.FC<{ service: ServiceItem }> = ({ service }) => (
   <Card
     className="group flex flex-col border border-border/60 bg-card
-               rounded-2xl transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/40
-               hover:border-border"
+               rounded-2xl md:transition-all md:duration-300
+               md:hover:-translate-y-1 md:hover:shadow-xl md:hover:shadow-black/10 dark:md:hover:shadow-black/40
+               md:hover:border-border"
   >
     <CardHeader className="flex flex-row items-center gap-4 pb-2">
       <div

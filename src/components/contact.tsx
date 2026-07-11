@@ -15,8 +15,8 @@ const PersonCard: React.FC<{
                border border-border/60 bg-card
                shadow-lg shadow-black/5 dark:shadow-black/30
                p-4 flex flex-row items-center gap-4 text-left
-               transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/40"
+               md:transition-all md:duration-300
+               md:hover:-translate-y-1 md:hover:shadow-xl md:hover:shadow-black/10 dark:md:hover:shadow-black/40"
   >
     <Image
       className="w-14 h-14 shrink-0 rounded-full object-cover
