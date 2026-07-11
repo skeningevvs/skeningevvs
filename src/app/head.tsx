@@ -3,7 +3,10 @@ export default function Head() {
     <>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Skeninge VVS AB - Rörmokare, Badrumsrenovering & Värmesystem i Skänninge, Mjölby & Östergötland</title>
+      <title>
+        Skeninge VVS AB - Rörmokare, Badrumsrenovering & Värmesystem i
+        Skänninge, Mjölby & Östergötland
+      </title>
 
       <meta
         name="description"
@@ -14,9 +17,9 @@ export default function Head() {
         content="VVS, Skänninge, Mjölby, Linköping, Boxholm, Tranås, Vadstena, Motala, Vädersta, Vikingstad, Mantorp, Rörmokare, Badrumsrenovering, Värmepumpar, Golvvärme, VVS-installation, VVS-tjänster"
       />
 
-  <meta name="author" content="Skeninge VVS AB" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://skeningevvs.se/" />
+      <meta name="author" content="Skeninge VVS AB" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://skeningevvs.se/" />
 
       <meta
         property="og:title"
@@ -33,7 +36,6 @@ export default function Head() {
       <meta property="og:url" content="https://skeningevvsab.pages.dev/" />
       <meta property="og:type" content="website" />
 
-    
       <link rel="icon" href="/favicon.png" type="image/png" />
     </>
   );

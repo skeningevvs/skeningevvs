@@ -1,13 +1,20 @@
 import React from "react";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Manrope } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 
 const manrope = Manrope({
   subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+  weight: ["600", "700", "800"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata = {
@@ -21,11 +28,14 @@ export const metadata = {
   author: "Skeninge VVS AB",
   robots: "index, follow",
   openGraph: {
-    title: "Skeninge VVS AB – Professionella VVS-tjänster i Skänninge, Mjölby & Östergötland",
+    title:
+      "Skeninge VVS AB – Professionella VVS-tjänster i Skänninge, Mjölby & Östergötland",
     description:
       "Familjeföretag med över 35 års erfarenhet av VVS. Vi erbjuder certifierade VVS-tjänster för privatpersoner och företag i hela Östergötland.",
     url: "https://skeningevvsab.pages.dev/",
-    images: [{ url: "https://skeningevvsab.pages.dev/content/Images/SkeningeVVS.png" }],
+    images: [
+      { url: "https://skeningevvsab.pages.dev/content/Images/SkeningeVVS.png" },
+    ],
   },
 };
 
@@ -36,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sv" suppressHydrationWarning>
-      <body className={manrope.variable}>
+      <body className={`${manrope.variable} ${inter.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

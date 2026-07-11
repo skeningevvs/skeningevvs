@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -21,7 +20,9 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
   // Om inte monterad, använd en standardbild för server-rendering.
   // Om monterad, använd den faktiska temabildkällan.
   const imageSrc = mounted
-    ? (resolvedTheme === "dark" ? "/images/skeningevvs-vit.png" : "/images/skeningevvs.png")
+    ? resolvedTheme === "dark"
+      ? "/images/skeningevvs-vit.png"
+      : "/images/skeningevvs.png"
     : "/images/skeningevvs.png"; // Standardbild för SSR
 
   return (

@@ -11,32 +11,34 @@ const PersonCard: React.FC<{
   mail?: string;
 }> = ({ img, name, title, phone, mail }) => (
   <Card
-    className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-3xl
-               border border-border/60 bg-card/60 backdrop-blur
+    className="w-full rounded-3xl
+               border border-border/60 bg-card
                shadow-lg shadow-black/5 dark:shadow-black/30
-               p-5 flex flex-col items-center text-center
+               p-4 flex flex-row items-center gap-4 text-left
                transition-all duration-300
                hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/40"
   >
     <Image
-      className="w-20 h-20 rounded-full object-cover mb-3
+      className="w-14 h-14 shrink-0 rounded-full object-cover
                  ring-2 ring-primary/30 border border-border/60
                  transition-transform duration-300 hover:scale-105"
       src={img}
       alt={name}
-      width={80}
-      height={80}
+      width={56}
+      height={56}
     />
-    <div className="space-y-2">
-      <h3 className="text-lg font-semibold text-foreground">{name}</h3>
-      <p className="text-sm text-muted-foreground">{title}</p>
+    <div className="space-y-1 min-w-0">
+      <h3 className="text-base font-semibold text-foreground truncate">
+        {name}
+      </h3>
+      <p className="text-sm text-muted-foreground truncate">{title}</p>
 
       {phone && (
-        <div className="flex items-center justify-center gap-2 text-sm">
-          <Phone className="h-4 w-4 text-muted-foreground" />
+        <div className="flex items-center gap-1.5 text-xs">
+          <Phone className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
           <a
             href={`tel:${phone}`}
-            className="rounded-md px-2 py-1 text-primary transition-colors hover:bg-primary/10"
+            className="truncate text-primary transition-colors hover:underline"
           >
             {phone}
           </a>
@@ -44,11 +46,11 @@ const PersonCard: React.FC<{
       )}
 
       {mail && (
-        <div className="flex items-center justify-center gap-2 text-sm">
-          <Mail className="h-4 w-4 text-muted-foreground" />
+        <div className="flex items-center gap-1.5 text-xs">
+          <Mail className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
           <a
             href={`mailto:${mail}`}
-            className="rounded-md px-2 py-1 text-primary transition-colors hover:bg-primary/10"
+            className="truncate text-primary transition-colors hover:underline"
           >
             {mail}
           </a>
@@ -59,45 +61,39 @@ const PersonCard: React.FC<{
 );
 
 const Contact: React.FC = () => (
-  <section id="contact" className="flex flex-wrap justify-center gap-6 p-6">
-    <PersonCard
-      img="/images/kristian.png"
-      name="Kristian Engelke"
-      title="VVS-montör"
-      phone="0735-358075"
-      mail="skeningevvsab@msn.com"
-    />
-    <PersonCard
-      img="/images/bosse.png"
-      name="Bosse Engelke"
-      title="Ägare/VVS-montör"
-      phone="0708-417290"
-      mail="skeningevvsab@msn.com"
-    />
-    <PersonCard
-      img="/images/nina.png"
-      name="Nina Engelke"
-      title="Ägare/Administratör"
-      mail="skeningevvsab@msn.com"
-    />
-    <PersonCard
-      img="/images/tyson.png"
-      name="Tyson"
-      title="VVS-Vovve/Säkerhetsansvarig"
-      mail="skeningevvsab@msn.com"
-    />
-
-    {/* Google map */}
-    <div className="w-full mt-8 rounded-3xl overflow-hidden border border-border/60 shadow-lg shadow-black/5 dark:shadow-black/30">
-      <div className="w-full h-96">
-        <iframe
-          className="w-full h-full"
-          src="https://maps.google.com/maps?f=q&source=embed&hl=sv&q=58.386333,15.085444&output=embed"
-          frameBorder={0}
-          aria-hidden="false"
-          tabIndex={0}
-        ></iframe>
-      </div>
+  <section
+    id="contact"
+    className="relative z-20 container mx-auto px-4 pb-16
+               -mt-6 sm:-mt-8 md:-mt-28 lg:-mt-36
+               -mb-10 md:mb-0"
+  >
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+      <PersonCard
+        img="/images/kristian.png"
+        name="Kristian Engelke"
+        title="VVS-montör"
+        phone="0735-358075"
+        mail="skeningevvsab@msn.com"
+      />
+      <PersonCard
+        img="/images/bosse.png"
+        name="Bosse Engelke"
+        title="Ägare/VVS-montör"
+        phone="0708-417290"
+        mail="skeningevvsab@msn.com"
+      />
+      <PersonCard
+        img="/images/nina.png"
+        name="Nina Engelke"
+        title="Ägare/Administratör"
+        mail="skeningevvsab@msn.com"
+      />
+      <PersonCard
+        img="/images/tyson.png"
+        name="Tyson"
+        title="VVS-Vovve/Säkerhetsansvarig"
+        mail="skeningevvsab@msn.com"
+      />
     </div>
   </section>
 );

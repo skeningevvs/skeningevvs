@@ -3,31 +3,33 @@
 En modern, responsiv webbplats byggd med Next.js 16 (App Router), TypeScript och Tailwind CSS för Skeninge VVS AB.
 
 ## Snabbstart
+
 1. Klona repo och installera beroenden:
+
 ```sh
 npm install
 ```
 
 ## Funktioner
 
-- **Responsiv design** – fungerar sömlöst på mobil, surfplatta och desktop  
-- **Ljust & mörkt tema** – via `next-themes`, anpassar sig automatiskt efter systeminställning  
-- **Modern UI** – tillgängliga och estetiskt tilltalande komponenter via `shadcn/ui`  
-- **Startsida med hero-sektion** – tydligt budskap och Call To Action (CTA)  
-- **Om oss** – företagets historia, värderingar och expertis  
-- **Tjänster** – ikonbaserade kort som beskriver VVS-tjänsterna  
-- **Kontakt** – personalpresentation med bilder, telefonnummer & e-postadresser  
-- **Google Maps-integration** – visar besöksadress direkt på sidan  
-- **Footer** – logotyp, adress och kontaktinfo samlad  
-- **SEO-optimerad** – metadata, OpenGraph och beskrivningar för bättre synlighet  
+- **Responsiv design** – fungerar sömlöst på mobil, surfplatta och desktop
+- **Ljust & mörkt tema** – via `next-themes`, anpassar sig automatiskt efter systeminställning
+- **Modern UI** – tillgängliga och estetiskt tilltalande komponenter via `shadcn/ui`
+- **Startsida med hero-sektion** – tydligt budskap och Call To Action (CTA)
+- **Om oss** – företagets historia, värderingar och expertis
+- **Tjänster** – ikonbaserade kort som beskriver VVS-tjänsterna
+- **Kontakt** – personalpresentation med bilder, telefonnummer & e-postadresser
+- **Google Maps-integration** – visar besöksadress direkt på sidan
+- **Footer** – logotyp, adress och kontaktinfo samlad
+- **SEO-optimerad** – metadata, OpenGraph och beskrivningar för bättre synlighet
 
 ## Bilder & Mockups
 
 ### Mockup
+
 <p align="center">
   <img src="./public/mockup-skeningevvs.jpg" alt="Mockup - Dagens Dos" width="700">
 </p>
-
 
 ### Exempelbilder
 
@@ -135,4 +137,3 @@ Josefine Eriksson
 Fullstack utvecklare, Grafisk/Webbdesigner & UI/UX Designer
 🌐 https://kodochdesign.se
 ```
-

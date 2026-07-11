@@ -59,12 +59,12 @@ const Navbar: React.FC = () => {
         {/* Höger sida: Temaväxling och Mobila kontroller */}
         <div className="flex items-center space-x-2">
           {/* Temaknappen är nu alltid synlig */}
-          <div className="hidden md:block">
+          <div className="hidden md:block border-0">
             <ModeToggle />
           </div>
 
           {/* Thema knapp i mobilläge */}
-          <div className="md:hidden">
+          <div className="md:hidden border-0">
             <ModeToggle />
           </div>
           {/* Hamburgermenyn för mobiler */}
@@ -85,9 +85,7 @@ const Navbar: React.FC = () => {
                 <SheetDescription className="sr-only">
                   Huvudnavigationsmeny med länkar till olika sektioner på sidan.
                 </SheetDescription>
-                <div className="flex justify-end items-center mb-4">
-                  {/* Temaknappen här endast för att visa att den inte ska vara där längre */}
-                </div>
+                <div className="flex justify-end items-center mb-4"></div>
                 <ul className="space-y-4">
                   {navLinks.map((link) => (
                     <li key={link.href}>
@@ -105,7 +103,6 @@ const Navbar: React.FC = () => {
               </SheetContent>
             </Sheet>
           </div>
-          {/* Temaknappen för mobila enheter, nu bredvid hamburgermenyn */}
         </div>
       </div>
     </nav>

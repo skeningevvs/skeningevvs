@@ -59,62 +59,94 @@ const services: ServiceItem[] = [
   },
 ];
 
-const Services: React.FC = () => (
-  <section id="service" className="container mx-auto py-16 px-4">
-    <div className="mb-12 text-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight">
-        Våra Tjänster
-      </h2>
-      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-        Vi erbjuder ett brett spektrum av VVS-tjänster för både privatpersoner
-        och företag. Från kompletta badrumsrenoveringar till service och
-        energirådgivning.
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <Card
-          key={service.title}
-          className="group flex flex-col border border-border/60 bg-card/60 backdrop-blur
-                     rounded-2xl transition-all duration-300
-                     hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/40
-                     hover:border-border"
-        >
-          <CardHeader className="flex flex-row items-center gap-4 pb-2">
-            <div
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/60 bg-background/60
-                         shadow-sm transition-transform duration-300 group-hover:scale-105"
-            >
-              <service.icon className="text-secondary h-6 w-6" />
-            </div>
-            <CardTitle className="text-xl font-semibold text-foreground">
-              {service.title}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex-grow pt-2">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              {service.description}
-            </p>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-
-    {/* Bildsektion */}
-    <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-12">
-      <div className="w-full md:w-1/2 lg:w-2/5 flex justify-center">
-        <Image
-          src="/images/skeningevvs-frontbuss.png"
-          alt="Skeninge VVS servicebil"
-          width={500}
-          height={500}
-          className="rounded-3xl border-0 
-                     transition-transform duration-300 hover:scale-[1.02]"
-        />
+const ServiceCard: React.FC<{ service: ServiceItem }> = ({ service }) => (
+  <Card
+    className="group flex flex-col border border-border/60 bg-card
+               rounded-2xl transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/40
+               hover:border-border"
+  >
+    <CardHeader className="flex flex-row items-center gap-4 pb-2">
+      <div
+        className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/0 
+                    transition-transform duration-300 group-hover:scale-105"
+      >
+        <service.icon className="text-accent-foreground: h-6 w-6" />
       </div>
-    </div>
-  </section>
+      <CardTitle className="text-xl font-semibold text-primary">
+        {service.title}
+      </CardTitle>
+    </CardHeader>
+    <CardContent className="flex-grow pt-2">
+      <p className="text-base text-muted-foreground leading-relaxed">
+        {service.description}
+      </p>
+    </CardContent>
+  </Card>
 );
+
+const Services: React.FC = () => {
+  const gridServices = services.slice(0, 6);
+  const lastService = services[6];
+
+  return (
+    <section id="service" className="relative">
+      <div className="container mx-auto pt-16 px-4">
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight">
+            Våra Tjänster
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Vi erbjuder ett brett spektrum av VVS-tjänster för både
+            privatpersoner och företag. Från kompletta badrumsrenoveringar till
+            service och energirådgivning.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {gridServices.map((service) => (
+            <ServiceCard key={service.title} service={service} />
+          ))}
+        </div>
+
+        {/* MOBIL: sista kortet i normalt flöde, bakgrundsbildens tak glider lite över det */}
+        <div className="md:hidden relative z-10 mt-8 -mb-6">
+          <ServiceCard service={lastService} />
+        </div>
+      </div>
+
+      {/* Bakgrundsbild som flätar samman tjänster och kontaktkort */}
+      <div className="relative">
+        {/* MOBIL: större, beskuren bild */}
+        <div className="md:hidden relative h-80 sm:h-96 w-full overflow-hidden">
+          <Image
+            src="/images/bakgrund-bil.png"
+            alt="Skeninge VVS servicebil"
+            fill
+            className="object-cover object-center select-none"
+          />
+        </div>
+
+        {/* DESKTOP: bild i naturligt bildförhållande */}
+        <Image
+          src="/images/bakgrund-bil.png"
+          alt="Skeninge VVS servicebil"
+          width={1920}
+          height={1077}
+          className="hidden md:block w-full h-auto select-none"
+        />
+
+        {/* DESKTOP: sista kortet flyter ovanpå bilden */}
+        <div className="hidden md:block absolute inset-x-0 top-10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-sm">
+              <ServiceCard service={lastService} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Services;
