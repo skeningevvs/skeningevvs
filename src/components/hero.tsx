@@ -59,7 +59,10 @@ const Hero: React.FC = () => {
                 size="sm"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground border-none rounded-full px-4 py-4 text-sm shadow-lg shadow-black/30 transition-all active:scale-[0.99]"
               >
-                <Link href="#service">Våra tjänster</Link>
+                <Link href="#service" className="flex items-center">
+                  Våra tjänster
+                  <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -107,7 +110,10 @@ const Hero: React.FC = () => {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground border-none px-8 py-7 text-lg rounded-2xl shadow-xl shadow-black/40 transition-all hover:-translate-y-1"
               >
-                <Link href="#service">Våra tjänster</Link>
+                <Link href="#service" className="flex items-center">
+                  Våra tjänster
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
 
