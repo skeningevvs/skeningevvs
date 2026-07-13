@@ -28,25 +28,11 @@ npm install
 ### Mockup
 
 <p align="center">
-  <img src="./public/mockup-skeningevvs.jpg" alt="Mockup - Dagens Dos" width="700">
+  <img src="./public/mockup-skeningevvs.png" alt="Mockup - Skeninge VVS" width="700">
 </p>
 
-### Exempelbilder
 
-![Projektbild 1](public/image1.png)  
-![Projektbild 2](public/image2.png)
 
-### Företagsbilder
-
-| Bosse                             | Kristian                                | Nina                            |
-| --------------------------------- | --------------------------------------- | ------------------------------- |
-| ![Bosse](public/images/bosse.png) | ![Kristian](public/images/kristian.png) | ![Nina](public/images/nina.png) |
-
-| Tyson                             | Buss 1                                           | Buss 2                                         |
-| --------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
-| ![Tyson](public/images/tyson.png) | ![Buss](public/images/skeningevvs-frontbuss.png) | ![Buss vit](public/images/skeningevvs-vit.png) |
-
----
 
 ## Filstruktur (förenklad översikt)
 
