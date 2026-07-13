@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CtaBanner: React.FC = () => (
@@ -25,10 +24,10 @@ const CtaBanner: React.FC = () => (
         size="lg"
         className="bg-secondary hover:bg-secondary/90 text-secondary-foreground border-none px-6 py-6 text-base rounded-2xl shadow-xl shadow-black/30 transition-all active:scale-[0.99]"
       >
-        <Link href="#contact" className="flex items-center justify-center">
-          Kontakta oss
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
+        <a href="tel:0735358075" className="flex items-center justify-center">
+          Ring oss!
+          <Phone className="ml-2 h-5 w-5" />
+        </a>
       </Button>
     </div>
   </section>
