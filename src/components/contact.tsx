@@ -23,7 +23,7 @@ const PersonCard: React.FC<{
                  ring-2 ring-primary/30 border border-border/60
                  transition-transform duration-300 hover:scale-105"
       src={img}
-      alt={name}
+      alt={`${name}, ${title} på Skeninge VVS`}
       width={56}
       height={56}
     />

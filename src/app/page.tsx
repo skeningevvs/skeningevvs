@@ -1,43 +1,4 @@
 import React from "react";
-
-export const metadata = {
-  title:
-    "Skeninge VVS AB | VVS-tjänster i Östergötland med fokus på Skänninge, Mjölby och Vadstena med omnejd.",
-  description:
-    "Skeninge VVS AB erbjuder professionella VVS-tjänster i Östergötland med fokus på Skänninge, Mjölby, Vadstena och Vikingstad med omnejd. Kontakta oss för installation, service och reparation.",
-  keywords: [
-    "VVS",
-    "Skeninge",
-    "Skänninge",
-    "rörmokare",
-    "installation",
-    "service",
-    "reparation",
-    "Östergötland",
-    "Mjölby",
-    "Mantorp",
-    "Vadstena",
-    "VVS-tjänster",
-    "värmepumpar",
-  ],
-  openGraph: {
-    title: "Skeninge VVS AB | VVS-tjänster i  och Östergötland",
-    description:
-      "Skeninge VVS AB erbjuder professionella VVS-tjänster i Östergötland med fokus på Skänninge, Mjölby och Vadstena med omnejd.",
-    url: "https://skeningevvs.se",
-    siteName: "Skeninge VVS AB",
-    images: [
-      {
-        url: "/mockup-skeningevvs.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Skeninge VVS AB mockup",
-      },
-    ],
-    locale: "sv_SE",
-    type: "website",
-  },
-};
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import About from "../components/about";
@@ -46,30 +7,67 @@ import Services from "../components/services";
 import Contact from "../components/contact";
 import CtaBanner from "../components/cta-banner";
 import Footer from "../components/footer";
-import VisitTracker from "../components/visit-tracker";
+import { SITE_URL } from "@/lib/site";
+
+// Strukturerad data för Google (lokalt företag). Uppgifterna måste stämma
+// med kontaktkorten och footern – se "Företagsuppgifter" i AGENTS.md.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "@id": `${SITE_URL}/#foretag`,
+  name: "Skeninge VVS AB",
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/skeningevvs.png`,
+  image: `${SITE_URL}/og-image.jpg`,
+  description:
+    "Familjeföretag sedan 1986 med VVS-tjänster för privatpersoner och företag: rörinstallationer, värmesystem, badrumsrenovering, köksinstallationer, service och energisparande lösningar.",
+  foundingDate: "1986",
+  telephone: "+46735358075",
+  email: "skeningevvsab@msn.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Fabriksgatan 6",
+    postalCode: "596 33",
+    addressLocality: "Skänninge",
+    addressRegion: "Östergötlands län",
+    addressCountry: "SE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 58.386333,
+    longitude: 15.085444,
+  },
+  areaServed: [
+    "Skänninge",
+    "Mjölby",
+    "Vadstena",
+    "Motala",
+    "Linköping",
+    "Boxholm",
+    "Tranås",
+    "Vikingstad",
+    "Mantorp",
+    "Väderstad",
+  ].map((name) => ({ "@type": "City", name })),
+  employee: [
+    {
+      "@type": "Person",
+      name: "Bosse Engelke",
+      jobTitle: "Ägare/VVS-montör",
+      telephone: "+46708417290",
+    },
+    {
+      "@type": "Person",
+      name: "Kristian Engelke",
+      jobTitle: "VVS-montör",
+      telephone: "+46735358075",
+    },
+  ],
+};
 
 export default function Page() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Plumber",
-    name: "Skeninge VVS AB",
-    url: "https://skeningevvs.se",
-    logo: "https://skeningevvs.se/mockup-skeningevvs.jpg",
-    image: "https://skeningevvs.se/mockup-skeningevvs.jpg",
-    description:
-      "Skeninge VVS AB erbjuder professionella VVS-tjänster i Skeninge och hela Östergötland. Kontakta oss för installation, service och reparation.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Din gata 1",
-      addressLocality: "Skeninge",
-      postalCode: "12345",
-      addressCountry: "SE",
-    },
-    telephone: "+4612345678",
-  };
   return (
     <>
-      <VisitTracker />
       <Navbar />
       <main className="bg-background text-foreground">
         <script

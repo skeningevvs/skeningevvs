@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
       <div className="absolute bg-center inset-0 z-0 hidden md:block">
         <Image
           src="/images/skeninge-vvs-i-skänninge-mjölby-vadstena.png"
-          alt="Skeninge VVS"
+          alt="Skeninge VVS servicebil på kullerstensgata i Skänninge"
           fill
           className="object-cover object-center opacity-40"
           priority
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
         <div className="relative w-full overflow-hidden bg-background">
           <Image
             src="/images/hero-mobil.png"
-            alt="Skeninge VVS"
+            alt="Skeninge VVS servicebil i Skänninge"
             width={1107}
             height={684}
             className="w-full h-auto"
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
 
             <h1 className="text-3xl font-extrabold tracking-tight leading-[1.15] text-primary-foreground mb-3">
               Din lokala expert <br />
-              på <span className="text-secondary">VVS</span>
+              på <span className="text-secondary">VVS</span> i Skänninge
             </h1>
 
             <div className="flex flex-col items-start gap-2">
@@ -84,9 +84,17 @@ const Hero: React.FC = () => {
               Skeninge VVS — Din lokala partner
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-primary-foreground mb-6 leading-[1.1]">
-              Din lokala expert på <span className="text-secondary">VVS</span>
-            </h1>
+            {/* Sidans enda <h1> ligger i mobillayouten ovan. Den här är en
+                visuell kopia för desktop; role/aria-level gör att skärmläsare
+                ändå uppfattar den som huvudrubrik (mobilversionen är dold här). */}
+            <p
+              role="heading"
+              aria-level={1}
+              className="text-5xl md:text-7xl font-extrabold tracking-tight text-primary-foreground mb-6 leading-[1.1]"
+            >
+              Din lokala expert på <span className="text-secondary">VVS</span> i
+              Skänninge
+            </p>
 
             <p className="text-xl md:text-2xl text-foreground/70 font-medium mb-10 max-w-xl leading-relaxed">
               Små i storlek – stora på service. VVS-tjänster för både

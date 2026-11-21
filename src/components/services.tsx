@@ -121,7 +121,7 @@ const Services: React.FC = () => {
         <div className="md:hidden relative h-80 sm:h-96 w-full overflow-hidden">
           <Image
             src="/images/bakgrund-bil.png"
-            alt="Skeninge VVS servicebil"
+            alt="Skeninge VVS servicebil på väg till kund i Östergötland"
             fill
             className="object-cover object-center select-none"
           />
@@ -130,7 +130,7 @@ const Services: React.FC = () => {
         {/* DESKTOP: bild i naturligt bildförhållande */}
         <Image
           src="/images/bakgrund-bil.png"
-          alt="Skeninge VVS servicebil"
+          alt="Skeninge VVS servicebil på väg till kund i Östergötland"
           width={1920}
           height={1077}
           className="hidden md:block w-full h-auto select-none"

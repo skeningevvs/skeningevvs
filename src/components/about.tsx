@@ -38,7 +38,7 @@ const About: React.FC = () => (
       <div className="w-full md:w-1/2 flex justify-center items-center relative">
         <Image
           src="/images/kristiantysonbosse.png"
-          alt="Teamet från Skeninge VVS"
+          alt="Kristian och Bosse Engelke med hunden Tyson – teamet bakom Skeninge VVS i Skänninge"
           width={600}
           height={400}
           className="rounded-2xl

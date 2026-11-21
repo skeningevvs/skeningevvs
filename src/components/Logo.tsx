@@ -29,7 +29,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
     <Image
       // src={isDarkMode ? "/images/skeningevvs-vit.png" : "/images/skeningevvs.png"} // Gammal rad
       src={imageSrc} // Använd den dynamiskt bestämda källan
-      alt="Skeninge VVS Logo"
+      alt="Skeninge VVS AB logotyp"
       width={600}
       height={600}
       className={className}
