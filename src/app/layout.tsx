@@ -21,15 +21,12 @@ const inter = Inter({
 
 const title = "Rörmokare & VVS i Skänninge och Mjölby | Skeninge VVS AB";
 const description =
-  "Familjeföretag sedan 1986. Rörinstallationer, badrumsrenovering, värmepumpar och VVS-service i Skänninge, Mjölby, Vadstena och Motala.";
+  "Familjeföretag sedan 1986. Rörinstallationer, badrumsrenovering, värmepumpar och VVS-service i Skänninge, Mjölby, Vadstena och Motala med omnejd. Ring oss!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title,
   description,
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -37,7 +34,6 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: "/",
     siteName: "Skeninge VVS AB",
     locale: "sv_SE",
     type: "website",

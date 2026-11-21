@@ -7,7 +7,18 @@ import Services from "../components/services";
 import Contact from "../components/contact";
 import CtaBanner from "../components/cta-banner";
 import Footer from "../components/footer";
+import VisitTracker from "../components/visit-tracker";
+import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
+
+// Canonical sätts här (inte i layout.tsx) så att andra sidor, t.ex.
+// /besokare, inte ärver startsidans canonical. Lägg inte till openGraph här –
+// det skulle ersätta hela openGraph-objektet från layout.tsx (inklusive bilden).
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 // Strukturerad data för Google (lokalt företag). Uppgifterna måste stämma
 // med kontaktkorten och footern – se "Företagsuppgifter" i AGENTS.md.
@@ -68,6 +79,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
+      <VisitTracker />
       <Navbar />
       <main className="bg-background text-foreground">
         <script
