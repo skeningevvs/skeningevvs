@@ -46,6 +46,7 @@ import Services from "../components/services";
 import Contact from "../components/contact";
 import CtaBanner from "../components/cta-banner";
 import Footer from "../components/footer";
+import VisitTracker from "../components/visit-tracker";
 
 export default function Page() {
   const jsonLd = {
@@ -68,6 +69,7 @@ export default function Page() {
   };
   return (
     <>
+      <VisitTracker />
       <Navbar />
       <main className="bg-background text-foreground">
         <script
